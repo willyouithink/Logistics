@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/logistics-commons/logistics-commons.iml" filepath="$PROJECT_DIR$/logistics-commons/logistics-commons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistics-manager/logistics-manager.iml" filepath="$PROJECT_DIR$/logistics-manager/logistics-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistics-manager/logistics-manager-dao/logistics-manager-dao.iml" filepath="$PROJECT_DIR$/logistics-manager/logistics-manager-dao/logistics-manager-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistics-manager/logistics-manager-interface/logistics-manager-interface.iml" filepath="$PROJECT_DIR$/logistics-manager/logistics-manager-interface/logistics-manager-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistics-manager/logistics-manager-pojo/logistics-manager-pojo.iml" filepath="$PROJECT_DIR$/logistics-manager/logistics-manager-pojo/logistics-manager-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistics-manager/logistics-manager-service/logistics-manager-service.iml" filepath="$PROJECT_DIR$/logistics-manager/logistics-manager-service/logistics-manager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web/logistics-manager-web.iml" filepath="$PROJECT_DIR$/logistics-manager/logistics-manager-web/logistics-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistics-parent/logistics-parent.iml" filepath="$PROJECT_DIR$/logistics-parent/logistics-parent.iml" />
+    </modules>
+  </component>
+</project>
