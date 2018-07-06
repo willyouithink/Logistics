@@ -1,0 +1,8 @@
+﻿.ac_results { padding: 0px; border: 1px solid #D6D6D6; background-color: white; overflow: hidden; z-index:100; }
+.ac_results ul { width: 100%; list-style-position: outside; list-style: none; padding: 0; margin: 0; }
+.ac_results li { margin: 0px; padding: 5px 5px; cursor: default; display: block; line-height: 16px; overflow: hidden; }
+.ac_results .item { text-align:left; float:left; }
+.ac_results .num { text-align:right; float:right; color:Green; }
+.ac_loading { background: white url('../images/indicator.gif') right center no-repeat; }
+.ac_odd { background-color: #F3F3F3; }
+.ac_over { background-color:#FF6C00; color: white; }

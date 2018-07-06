@@ -1,0 +1,20 @@
+var live800_SpeCode="";
+var live800_SpeCodeLeaveUrl="";
+var live800_companyID="8912";
+var live800_protocol="https:";
+var live800_isMobile="0";
+var enterurl="null";
+var companyStatus=1;
+var isNewChatBox=true;
+var live800_baseUrl="online-service.deppon.com";
+var live800_baseHtmlUrl="online-service.deppon.com";
+var live800_baseWebApp="/live800";
+var live800_baseChatHtmlDir="/chatClient";
+var live800_defined_params="k=1";
+var live800_configID="14";
+var live800_codeType="steady";
+var live800_configContent="live800_float=1&live800_online=https%3A%2F%2Fwww.deppon.com%2Fupload%2Farticle%2F201206%2F1250042767.png&live800_offline=https%3A%2F%2Fwww.deppon.com%2Fupload%2Farticle%2F201206%2F1250042767.png&live800_switch=1&live800_skill=17";
+var skill={id:17,isOnline:false};
+
+document.write("<scr"+"ipt language=\"javascript\" src=\"https://online-service.deppon.com/live800/chatClient/script/utils.js\" charset=\"UTF-8\"></scr"+"ipt>");
+document.write("<scr"+"ipt language=\"javascript\" src=\"https://online-service.deppon.com/live800/chatClient/staticButtonStatic.js\" charset=\"UTF-8\"></scr"+"ipt>");
