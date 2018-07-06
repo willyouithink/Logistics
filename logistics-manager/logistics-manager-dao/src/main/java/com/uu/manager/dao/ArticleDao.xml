@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.uu.manager.dao.ArticleDao" >
+    
+    <sql id="where_Clauser">
+        <where>
+            state !=3
+            <if test="query!=null and query.aname!=null and query.aname!=''">
+                and aname like "%${query.aname}%"
+            </if>
+
+        </where>
+    </sql>
+
+
+    <select id="countArticle" resultType="java.lang.Integer">
+        select count(1) from articlelist
+        <include refid="where_Clauser"/>
+
+    </select>
+
+    <select id="listArticleBypage"  parameterType="com.uu.manager.pojo.dto.Page" resultType="com.uu.manager.pojo.vo.ArticleCustom">
+    select *
+    from articlelist
+        <include refid="where_Clauser"/>
+    limit #{page.offset},#{page.limit}
+</select>
+
+
+<update id="updateStatusById" parameterType="java.util.List">
+        update articlelist set state=3 where aid in
+        <foreach collection="list" item="aid" open="(" close=")" separator=",">
+            #{aid}
+        </foreach>
+    </update>
+
+
+    <insert id="addArticle">
+
+        insert into  articlelist(aname,atime,people,title, state,details)
+        values (#{aname},#{atime},#{people},#{title},#{state},#{details})
+
+
+    </insert>
+
+
+
+
+
+    <select id="editArticle" resultType="com.uu.manager.pojo.po.ArticleList">
+
+        SELECT * FROM articlelist WHERE aid=#{aid}
+    </select>
+
+    <update id="articleSave" parameterType="com.uu.manager.pojo.po.ArticleList">
+        UPDATE articlelist
+        <set>
+            <if test="aname!=null and aname!=''">aname=#{aname},</if>
+            <if test="atime!=null and atime!=''">atime=#{atime},</if>
+            <if test="people!=null and people!=''">people=#{people},</if>
+            <if test="title!=null and title!=''">title=#{title},</if>
+            <if test="state!=null and state!=''">state=#{state},</if>
+            <if test="details!=null and details!=''">details=#{details},</if>
+
+        </set>
+          WHERE aid=#{aid}
+
+    </update>
+
+    
+    
+
+
+</mapper>

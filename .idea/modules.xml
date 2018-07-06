@@ -10,6 +10,14 @@
       <module fileurl="file://$PROJECT_DIR$/logistics-manager/logistics-manager-service/logistics-manager-service.iml" filepath="$PROJECT_DIR$/logistics-manager/logistics-manager-service/logistics-manager-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web/logistics-manager-web.iml" filepath="$PROJECT_DIR$/logistics-manager/logistics-manager-web/logistics-manager-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/logistics-parent/logistics-parent.iml" filepath="$PROJECT_DIR$/logistics-parent/logistics-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistics-protal-web/logistics-protal-web.iml" filepath="$PROJECT_DIR$/logistics-protal-web/logistics-protal-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistics-search/logistics-search.iml" filepath="$PROJECT_DIR$/logistics-search/logistics-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistics-search/logistics-search-dao/logistics-search-dao.iml" filepath="$PROJECT_DIR$/logistics-search/logistics-search-dao/logistics-search-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistics-search/logistics-search-interface/logistics-search-interface.iml" filepath="$PROJECT_DIR$/logistics-search/logistics-search-interface/logistics-search-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistics-search/logistics-search-pojo/logistics-search-pojo.iml" filepath="$PROJECT_DIR$/logistics-search/logistics-search-pojo/logistics-search-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistics-search/logistics-search-service/logistics-search-service.iml" filepath="$PROJECT_DIR$/logistics-search/logistics-search-service/logistics-search-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistics-search/logistics-search-web/logistics-search-web.iml" filepath="$PROJECT_DIR$/logistics-search/logistics-search-web/logistics-search-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/logistics-shiro/logistics-shiro.iml" filepath="$PROJECT_DIR$/logistics-shiro/logistics-shiro.iml" />
     </modules>
   </component>
 </project>

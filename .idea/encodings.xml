@@ -2,13 +2,76 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/logistics-commons" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logistics-commons/src/main/java/com/uu/manager/utils/Const.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-commons/src/main/java/com/uu/manager/utils/FastDFSFile.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-commons/src/main/java/com/uu/manager/utils/FastDFSUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-commons/src/main/java/com/uu/manager/utils/FtpUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-commons/src/main/java/com/uu/manager/utils/HashKit.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-commons/src/main/java/com/uu/manager/utils/JsonUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-commons/src/main/java/com/uu/manager/utils/Prop.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-commons/src/main/java/com/uu/manager/utils/PropKit.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-commons/src/main/java/com/uu/manager/utils/StrKit.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-commons/src/test/resources/db.properties" charset="GBK" />
     <file url="file://$PROJECT_DIR$/logistics-manager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-dao" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-pojo/src/main/java/com/uu/manager/pojo/po/Product.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web/src/main/resources/db.properties" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web/src/main/webapp/css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web/src/main/webapp/images/1.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web/src/main/webapp/images/bg.jpg" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web/src/main/webapp/images/common/sprite.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web/src/main/webapp/images/js/lib/datatable.js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web/src/main/webapp/images/main_bg.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web/src/main/webapp/static/css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web/src/main/webapp/static/fonts" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web/src/main/webapp/static/images" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web/src/main/webapp/static/js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web/src/main/webapp/static/js/lib/layui/layui.all.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/logistics-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/java/com/uu/protal/mapper/SearchIndexDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/java/com/uu/protal/service/impl/SearchIndexServiceImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/java/com/uu/protal/utils/PropKit.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/java/com/uu/protal/web/SearchAction.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/resources/db.properties" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/resources/file.properties" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/resources/spring/spring-solr.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/webapp/WEB-INF/jsp/index-search.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/webapp/css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/webapp/images" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/webapp/js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/webapp/picture" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/webapp/static/css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/webapp/static/images" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/webapp/static/js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-protal-web/src/main/webapp/static/picture" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-dao/src/main/java/com/uu/search/mapper/SearchIndexDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-service/src/main/java/com/uu/search/service/impl/SearchIndexServiceImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web/src/main/java/com/uu/search/web/SearchAction.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web/src/main/resources/db.properties" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web/src/main/resources/file.properties" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web/src/main/resources/logback.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web/src/main/resources/mybatis" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web/src/main/resources/spring" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web/src/main/webapp/WEB-INF/jsp/index-search.jsp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web/src/main/webapp/css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web/src/main/webapp/images" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web/src/main/webapp/js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web/src/main/webapp/picture" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web/src/main/webapp/static/css" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web/src/main/webapp/static/images" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web/src/main/webapp/static/js" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-search/logistics-search-web/src/main/webapp/static/picture" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/logistics-shiro" charset="UTF-8" />
   </component>
 </project>

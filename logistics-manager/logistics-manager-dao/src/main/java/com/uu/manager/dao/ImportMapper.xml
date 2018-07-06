@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.uu.manager.dao.ImportMapper" >
+<select id="indexImport" resultType="com.uu.manager.pojo.vo.IndexImport">
+    SELECT
+    p.pid as id,
+    p.pname,
+    p.shop_price,
+    p.pdesc,
+    p.pimage,
+    c.cname
+    FROM product p
+    LEFT JOIN category c ON p.cid = c.cid;
+</select>
+
+</mapper>

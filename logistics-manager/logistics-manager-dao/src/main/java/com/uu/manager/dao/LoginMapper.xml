@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.uu.manager.dao.LoginMapper" >
+<select id="login" resultType="com.uu.manager.pojo.po.TbAdmin">
+    SELECT
+   *
+    FROM tb_admin
+    where aname = #{aname} and apassword = #{apassword}
+</select>
+
+</mapper>

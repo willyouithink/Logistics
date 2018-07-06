@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.uu.manager.dao.SenderMapper" >
+<sql id="Base_Column_List">
+    s.sid,s.sname,s.saddress,s.weight,s.smoney,s.stime,s.state,c.cname as catName
+</sql>
+
+    <sql id="where_Clause">
+        <where>
+            s.state != 3
+            <if test="query!=null and query.sname!=null and query.sname!=''">
+                  and s.sname like "%${query.sname}%"
+            </if>
+        </where>
+    </sql>
+
+    <select id="countSender" resultType="long">
+        select count(1)
+        from tb_sender s
+   <include refid="where_Clause"/>
+
+    </select>
+    <!--<select id="listSenderByPage" parameterType="com.uu.manager.pojo.dto.Page" resultType="com.uu.manager.pojo.po.Sender">-->
+        <!--select *-->
+        <!--from tb_sender-->
+        <!--limit #{offset},#{limit}-->
+    <!--</select>-->
+    <select id="listSenderByPage" parameterType="com.uu.manager.pojo.dto.Page" resultType="com.uu.manager.pojo.vo.SenderCustom">
+        select
+        <include refid="Base_Column_List"/>
+        from tb_sender s left join tb_consignee c on s.cid=c.cid
+       <include refid="where_Clause"/>
+        order by s.sid asc
+        limit #{page.offset},#{page.limit}
+    </select>
+
+    <update id="updateStateByIds" parameterType="java.util.List">
+       update tb_sender set state=3 where sid in
+       <foreach collection="list" item="sid" open="(" close=")" separator=",">
+           #{sid}
+       </foreach>
+    </update>
+
+    <insert id="orderAdd" parameterType="com.uu.manager.pojo.vo.SenderAdd">
+        insert into tb_sender(sname,saddress,province,city,county,weight,smoney,stime,state,cid)
+        values(#{sname},#{saddress},#{province},#{city},#{county},#{weight},#{smoney},#{stime},#{state},#{cid})
+    </insert>
+    
+    <select id="listSenderById" resultType="com.uu.manager.pojo.po.Sender">
+        select * from tb_sender where sid=#{sid}
+    </select>
+
+    <update id="updateSenderById" parameterType="com.uu.manager.pojo.po.Sender">
+       update tb_sender
+       <set>
+           <if test="sname!=null and sname!=''">sname=#{sname},</if>
+           <!--<if test="province!=null and province!=''">province=#{province},</if>-->
+           <!--<if test="city!=null and city!=''">city=#{city},</if>-->
+           <!--<if test="county!=null and county!=''">county=#{county},</if>-->
+           <if test="saddress!=null and saddress!=''">saddress=#{saddress},</if>
+           <if test="weight!=null and weight!=''">weight=#{weight},</if>
+           <if test="smoney!=null ">smoney=#{smoney},</if>
+           <if test="stime!=null ">stime=#{stime},</if>
+        <!--<if test="state!=null">state=#{state},</if>-->
+           <if test="cid!=null ">cid=#{cid},</if>
+       </set>
+        where sid=#{sid}
+    </update>
+
+    <update id="updateState" >
+        update tb_sender
+        <set>
+            <if test="state!=null and state!=''">state=#{state},</if>
+        </set>
+        where sid=#{sid}
+    </update>
+
+</mapper>

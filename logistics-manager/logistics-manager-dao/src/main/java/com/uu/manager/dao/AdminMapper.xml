@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.uu.manager.dao.AdminMapper" >
+
+    <select id="countItems" resultType="java.lang.Long">
+        select count(1)
+        from tb_admin a
+        <where>
+            a.status !=0
+            <if test="query!=null and query.aname!=null and query.aname!=''">
+                and a.aname  like '%${query.aname}%'</if>
+        </where>
+    </select>
+    <!--<select id="adminList" resultType="com.uu.manager.pojo.vo.AdminQuery">-->
+        <!--select a.aid ,a.aname, a.aphone,a.aemail,a.atime,r.leave as leav,s.states as states-->
+        <!--from tb_admin a-->
+        <!--left join tb_role r on a.role = r.role-->
+        <!--left join tb_states s on a.status = s.status-->
+        <!--<where>-->
+            <!--a.status !=2-->
+            <!--<if test="query!=null and query.aname!=null and query.aname!=''">-->
+                <!--and a.aname  like '%${query.aname}%'</if>-->
+        <!--</where>-->
+        <!--limit #{page.offset},#{page.limit}-->
+    <!--</select>-->
+    <select id="adminList" resultType="com.uu.manager.pojo.vo.AdminQuery">
+        select a.aid ,a.aname, a.aphone,a.aemail,a.atime,r.leave as leav,a.status
+        from tb_admin a
+        left join tb_role r on a.role = r.role
+
+        <where>
+            a.status !=0
+            <if test="query!=null and query.aname!=null and query.aname!=''">
+                and a.aname  like '%${query.aname}%'</if>
+        </where>
+        limit #{page.offset},#{page.limit}
+    </select>
+
+
+
+    <update id="updateStates" parameterType="java.util.List">
+        update tb_admin set status=0 where aid in
+        <foreach collection="list" item="aid" open="(" close=")" separator=",">
+            #{aid}
+        </foreach>
+    </update>
+    <!--添加管理员-->
+    <insert id="adminAdd">
+    insert into tb_admin
+      (aname, apassword, aphone, aemail, role, atime, status)
+	values(#{aname},#{apassword},#{aphone},#{aemail},#{role},#{atime},#{status});
+    </insert>
+
+    <select id="adminEdit" parameterType="long" resultType="com.uu.manager.pojo.po.TbAdmin">
+        select * from tb_admin where aid = #{aid};
+    </select>
+    
+    <select id="findRole" resultType="com.uu.manager.pojo.po.TbRole">
+        select * from tb_role;
+    </select>
+
+    <!--编辑保存-->
+<update id="adminSave">
+    update tb_admin
+	<set>
+        <if test="aname!=null and aname!=''">aname=#{aname},</if>
+        <if test="apassword!=null and apassword!=''">apassword=#{apassword},</if>
+        <if test="aphone!=null and aphone!=''">aphone=#{aphone},</if>
+        <if test="aemail!=null and aemail!=''">aemail=#{aemail},</if>
+        <if test="role!=null and role!=''">role=#{role},</if>
+        <if test="atime!=null and atime!=''">atime=#{atime},</if>
+        <if test="status!=null and status!=''">status=#{status},</if>
+    </set>
+    where aid=#{aid}
+</update>
+    <!--查询role的值-->
+    <select id="showState"  resultType="com.uu.manager.pojo.po.TbAdmin">
+        select * from tb_admin where aid = #{aid}
+    </select>
+
+    <!--切换管理员状态-->
+    <update id="updateRole">
+        update tb_admin
+        <set>
+            <if test="aname!=null and aname!=''">aname=#{aname},</if>
+            <if test="apassword!=null and apassword!=''">apassword=#{apassword},</if>
+            <if test="aphone!=null and aphone!=''">aphone=#{aphone},</if>
+            <if test="aemail!=null and aemail!=''">aemail=#{aemail},</if>
+            <if test="role!=null and role!=''">role=#{role},</if>
+            <if test="atime!=null and atime!=''">atime=#{atime},</if>
+            <if test="status!=null and status!=''">status=#{status},</if>
+        </set>
+        where aid=#{aid}
+    </update>
+    <insert id="uploadSave" parameterType="com.uu.manager.pojo.po.Lunbo">
+        insert into tb_lunbo
+        (iid,img)
+	values(#{iid},#{img})
+    </insert>
+</mapper>

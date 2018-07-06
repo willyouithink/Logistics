@@ -44,6 +44,10 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/logistics-manager/logistics-manager-web" />
     <file type="web" url="file://$PROJECT_DIR$/logistics-manager、" />
+    <file type="web" url="file://$PROJECT_DIR$/logistics-protal-web" />
+    <file type="web" url="file://$PROJECT_DIR$/logistics-search-web" />
+    <file type="web" url="file://$PROJECT_DIR$/logistics-search/logistics-search-web" />
+    <file type="web" url="file://$PROJECT_DIR$/logistics-shiro" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -54,6 +58,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/logistics-manager、/pom.xml" />
+        <option value="$PROJECT_DIR$/logistics-search-web/pom.xml" />
       </set>
     </option>
   </component>

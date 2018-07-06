@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uu.manager.dao.UserMapper">
+
+    <select id="listUser" resultType="_long">
+    select count(1)
+    from tb_user u
+        <include refid="Where_Clause" />
+  </select>
+
+    <select id="listUserByPage" parameterType="com.uu.manager.pojo.dto.Page" resultType="com.uu.manager.pojo.vo.VoUser">
+    select
+        <include refid="All_List" />
+    from tb_user u left join tb_rank r on  u.rid= r.rid
+        <include refid="Where_Clause" />
+    limit #{page.offset},#{page.limit}
+  </select>
+
+    <update id="updateStatesByIds" parameterType="java.util.List">
+        update tb_user set ustates=3 where uid in
+        <foreach collection="list" item="uids" open="(" close=")" separator=",">
+            #{uids}
+        </foreach>
+    </update>
+
+
+    <sql id="All_List" >
+    u.uid, u.uname, u.ugender, u.uphone, u.uemail, u.uadress, u.uintime, u.urank, u.rid,u.ustates,r.rname,
+    CASE u.ustates WHEN 1 THEN "正常" WHEN -1 THEN "注销"  END   AS statusName
+  </sql>
+
+
+    <sql id="Where_Clause">
+        <where>
+            u.ustates != 3
+            <if test="searchVo != null and searchVo.title != null and searchVo.title != '' ">
+                and u.uname like '%${searchVo.title}%'
+            </if>
+        </where>
+    </sql>
+
+
+    <insert id="addUser" parameterType="com.uu.manager.pojo.vo.VoAddUser">
+        insert into tb_user
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+
+            <if test="uname != null" >
+                uname,
+            </if>
+            <if test="ugender != null" >
+                ugender,
+            </if>
+            <if test="uphone != null" >
+                uphone,
+            </if>
+            <if test="uemail != null" >
+                uemail,
+            </if>
+
+
+                urank,ustates,rid,uadress,
+
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+
+            <if test="uname != null" >
+                #{uname,jdbcType=VARCHAR},
+            </if>
+
+            <if test="ugender != null" >
+                #{ugender,jdbcType=VARCHAR},
+            </if>
+
+            <if test="uphone != null" >
+                #{uphone,jdbcType=VARCHAR},
+            </if>
+
+            <if test="uemail != null" >
+                #{uemail,jdbcType=VARCHAR},
+            </if>
+
+
+            1,1,1,#{uadress},
+
+        </trim>
+    </insert>
+
+<update id="updateUser" parameterType="com.uu.manager.pojo.po.User">
+update tb_user
+<set>
+    <if test='uname!=null and uname!=""' >uname=#{uname},</if>
+    <if test='uphone!=null and uphone!=""' >uphone=#{uphone},</if>
+    <if test='uemail!=null and uemail!=""' >uemail=#{uemail},</if>
+    <if test='uadress!=null and uadress!=""' >uadress=#{uadress},</if>
+</set>
+where  uid =#{uid}
+</update>
+
+    <delete id="delUser" parameterType="long">
+        delete  from tb_user where uid =#{uid}
+    </delete>
+
+
+    <select id="findUser" parameterType="long" resultType="com.uu.manager.pojo.po.User">
+        select  *  from tb_user   where uid=#{uid}
+    </select>
+
+<update id="changeStates" parameterType="long" >
+
+  update tb_user set ustates=ustates*(-1) where  uid =#{uid}
+</update>
+
+
+</mapper>

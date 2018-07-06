@@ -65,6 +65,54 @@
         <processorPath useClasspath="true" />
         <module name="logistics-manager-web" />
       </profile>
+      <profile default="false" name="Annotation profile for logistics-protal-web" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="logistics-protal-web" />
+      </profile>
+      <profile default="false" name="Annotation profile for logistics-search-web" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for logistics-search-pojo" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="logistics-search-pojo" />
+      </profile>
+      <profile default="false" name="Annotation profile for logistics-search-dao" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="logistics-search-dao" />
+      </profile>
+      <profile default="false" name="Annotation profile for logistics-search-interface" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="logistics-search-interface" />
+      </profile>
+      <profile default="false" name="Annotation profile for logistics-search-service" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="logistics-search-service" />
+      </profile>
+      <profile default="false" name="Annotation profile for logistics-shiro" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="logistics-shiro" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="logistics-commons" target="1.8" />
@@ -76,6 +124,14 @@
       <module name="logistics-manager-web" target="1.8" />
       <module name="logistics-manager、" target="1.8" />
       <module name="logistics-parent" target="1.8" />
+      <module name="logistics-protal-web" target="1.8" />
+      <module name="logistics-search" target="1.8" />
+      <module name="logistics-search-dao" target="1.8" />
+      <module name="logistics-search-interface" target="1.8" />
+      <module name="logistics-search-pojo" target="1.8" />
+      <module name="logistics-search-service" target="1.8" />
+      <module name="logistics-search-web" target="1.8" />
+      <module name="logistics-shiro" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

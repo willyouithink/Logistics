@@ -10,8 +10,12 @@
     <modules>
         <module>../logistics-commons</module>
         <module>../logistics-manager</module>
+        <module>../logistics-protal-web</module>
+        <module>../logistics-search</module>
+        <module>../logistics-shiro</module>
     </modules>
     <packaging>pom</packaging>
+    <!--版本号的统一管理-->
     <!--版本号的统一管理-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
