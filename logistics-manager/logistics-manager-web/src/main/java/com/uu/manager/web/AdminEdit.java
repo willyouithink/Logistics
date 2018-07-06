@@ -26,6 +26,11 @@ public class AdminEdit {
     private AdminService adminService;
 
 
+
+
+
+
+
     @RequestMapping(value = "/adminEdit")
     public String adminEdit(Long aid , HttpServletRequest request){
         System.out.print(aid);
